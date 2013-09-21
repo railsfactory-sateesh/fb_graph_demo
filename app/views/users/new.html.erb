@@ -1,0 +1,13 @@
+<%= form_for @user do |user_form| %>
+<p>
+	<%= user_form.label "Enter Access Token :" %>
+	<%= user_form.text_field :access_token %>
+</p>
+
+<span id="show_error" style="color:red;margin-left:170px;"> <%= flash[:now] if flash[:now]%> </span>
+<p>
+	<%= user_form.submit "Create User", :id => "fb_user_create", :style => "margin-left:185px;" %>
+</p>
+<% end %>
+
+<%= link_to "Back", users_path%> 
